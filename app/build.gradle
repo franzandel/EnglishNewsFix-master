@@ -1,0 +1,24 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply from: '../gradle-scripts/feature-gradleconfig.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.example.englishnewsfix"
+    }
+}
+
+dependencies {
+
+    //Feature Implementation
+    implementation project(path: ':base')
+    implementation project(path: ':englishNews')
+
+    // Dagger (All Dagger Dependencies should have same version)
+    kapt daggerDependencies.daggerCompiler
+    kapt daggerDependencies.daggerAndroidProcessor
+}

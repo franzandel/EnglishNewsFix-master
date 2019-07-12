@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/news_application_topbar_background_new"
+    android:orientation="horizontal"
+    android:paddingStart="0dp"
+    android:paddingEnd="15dp">
+
+    <ImageButton
+        android:id="@+id/btnToolbarBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:contentDescription="@string/back_review_form_button"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:src="@drawable/back_arrow"
+        app:srcCompat="@drawable/back_arrow" />
+
+    <TextView
+        android:id="@+id/tvToolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:layout_gravity="center"
+        android:textColor="@color/aasa_white"
+        android:textSize="18sp"
+        tools:text="Toolbar Title" />
+
+</LinearLayout>

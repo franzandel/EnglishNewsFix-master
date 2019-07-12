@@ -1,0 +1,40 @@
+apply plugin: 'com.android.library'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-kapt'
+
+apply from: '../gradle-scripts/feature-gradleconfig.gradle'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Support Library
+    // 12 Jul 2019 = com.google.android.material:material:1.0.0-rc01
+    implementation supportDependencies.design
+
+    // Dagger (All Dagger Dependencies should have same version)
+    api daggerDependencies.dagger
+    api daggerDependencies.daggerAndroidSupport
+    kapt daggerDependencies.daggerCompiler
+    kapt daggerDependencies.daggerAndroidProcessor
+
+    // Network Library
+    api retrofitDependencies.retrofit
+    api retrofitDependencies.converterGson
+    api retrofitDependencies.rxAdapterJava
+    implementation okhttpDependencies.okhttp
+    implementation okhttpDependencies.loggingInterceptor
+
+    // Reactive Library
+    api rxDependencies.rxJava
+    api rxDependencies.rxAndroid
+
+    // Groupie Adapter Library
+    api groupie
+
+    // Android Test Library
+    testImplementation jUnit
+    androidTestImplementation androidRunner
+    androidTestImplementation espressoDependencies.espressoCore
+}

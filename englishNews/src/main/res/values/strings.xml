@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">EnglishNewsFix</string>
+
+    <string name="back_review_form_button">FINISH</string>
+    <string name="news_toolbar_title">English News</string>
+    <string name="articles_toolbar_title">English News Articles</string>
+
+    <!-- Activity_SearchBar -->
+    <string name="activity_searchbar_title_search">Search</string>
+</resources>
